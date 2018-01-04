@@ -22,13 +22,13 @@
       background-position: center center;
       background-size: cover;
       border: none;
-      -webkit-animation: pulsate .8s linear;
+      -webkit-animation: pulsate 2s linear;
       -webkit-animation-iteration-count: infinite;
-      animation: pulsate .8s linear;
+      animation: pulsate 2s linear;
       animation-iteration-count: infinite;
     }
     #logo {
-      width: 150px;
+      width: 350px;
       position: absolute;
       top: 0;
       bottom: 0;
@@ -43,6 +43,12 @@
       25% {
         transform: scale(1.03);
       }
+      50% {
+        transform: scale(1);
+      }
+      75% {
+        transform: scale(.97);
+      }
       100% {
         transform: scale(1);
       }
@@ -52,6 +58,6 @@
 </head>
 
 <body>
-  <img id="logo" src="https://cdn.discordapp.com/attachments/227224735396790273/398556950062825474/gardnhead.png" />
+  <img id="logo" src="https://media.discordapp.net/attachments/227224735396790273/398558095820849162/gardnsalt_outline.png" />
 </body>
 </html>
