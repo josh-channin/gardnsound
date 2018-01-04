@@ -10,11 +10,48 @@
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
+
+  <style type="text/css">
+    html {
+      height: 100%;
+      overflow: hidden;
+    }
+    body {
+      height: 100%;
+      background: url(//b.thumbs.redditmedia.com/Hj0x1hGHSqGT0WeLH9BHvNcd47_BQCN1VXNtElW6VXs.png) no-repeat;
+      background-position: center center;
+      background-size: cover;
+      border: none;
+      -webkit-animation: pulsate .8s linear;
+      -webkit-animation-iteration-count: infinite;
+      animation: pulsate .8s linear;
+      animation-iteration-count: infinite;
+    }
+    #logo {
+      width: 150px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+    }
+    @keyframes pulsate {
+      0% {
+        transform: scale(1);
+      }
+      25% {
+        transform: scale(1.03);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    </style>
 </head>
 
-<body style="
-  background-image: url('https://cdn.discordapp.com/attachments/227224735396790273/398549054407049216/background.png')
-">
-
+<body>
+  <img id="logo" src="//b.thumbs.redditmedia.com/xpS9T8Egbr-QyOZLRXa33CzoP151YRhg1V_Idy_EzXg.png" />
 </body>
 </html>
