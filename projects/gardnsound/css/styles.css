@@ -22,7 +22,7 @@ body {
   background-size: cover;
   border: none;
 }
-.logo {
+#logo {
   width: 500px;
   position: absolute;
   top: 0;

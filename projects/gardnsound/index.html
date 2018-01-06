@@ -43,7 +43,7 @@
       <section class="mdc-toolbar__section mdc-toolbar__section--align-end"></section>
     </div>
   </header>
-  <div class="wrapper" style="mdc-elevation--z7">
+  <div class="wrapper" class="mdc-elevation--z7" id="icons" style="display: none">
     <div class="mdc-card">
 
         <div class="mdc-layout-grid">
@@ -62,8 +62,7 @@
 
     </div>
   </div>
-    <!-- <img class="logo" src="https://cdn.discordapp.com/attachments/227224735396790273/398559707259863040/lyla_and_gardnsound.png" />
-    <h2 class="gsound">Gardnsound</h2> -->
+    <img id="logo" src="https://cdn.discordapp.com/attachments/227224735396790273/398559707259863040/lyla_and_gardnsound.png" />
   <script>
     Array.from(document.getElementsByClassName('mdc-layout-grid__cell'))
       .forEach(function(el) {
@@ -71,6 +70,10 @@
           window.open(e.srcElement.dataset.link)
         })
       })
+    setTimeout(function(){
+      document.getElementById('logo').style.display = "none"
+      document.getElementById('icons').style.display = "block";
+    },2000)
   </script>
 </body>
 </html>
