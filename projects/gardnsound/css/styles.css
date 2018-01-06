@@ -1,0 +1,175 @@
+:root {
+  --mdc-theme-primary: #FFF;
+  --mdc-theme-background: #000;
+  --mdc-theme-text-primary-on-primary: #000;
+}
+* {
+  font-family: sans-serif;
+  color: black;
+}
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: url(//b.thumbs.redditmedia.com/Hj0x1hGHSqGT0WeLH9BHvNcd47_BQCN1VXNtElW6VXs.png) no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border: none;
+}
+.logo {
+  width: 500px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  -webkit-animation: pulsate 2s linear;
+  -webkit-animation-iteration-count: infinite;
+  animation: pulsate 2s linear;
+  animation-iteration-count: infinite;
+}
+.gsound {
+  text-shadow: 2px 2px 0px cyan;
+  color: #ff00d2;
+  font-size: 1.5rem;
+}
+.gsoundUP {
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0px cyan;
+  color: #ff00d2;
+  font-size: 1.5rem;
+}
+.gsound:hover {
+  text-shadow: 2px 2px 0px yellow;
+}
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.03);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(.97);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  max-width: 374px;
+  margin: 150px auto;
+}
+.mdc-card {
+  background-color: #FFF;
+    padding: 40px;
+}
+.mdc-grid-tile {
+  width: 216px;
+}
+
+.icon {
+  background-image: url('https://ps.w.org/social-media-buttons-toolbar/assets/screenshot-1.png?rev=1726633');
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.icon:hover, .patreon:hover, .bcampicon:hover {
+  transform: scale(1.05);
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.facebook {
+  background-position: -16px -19px;
+}
+
+.youtube {
+  background-position: -1185px -19px;
+}
+
+.soundc {
+  background-position: 1712px -148px;;
+}
+
+.reddit {
+  background-position: 746px -84px;
+}
+
+.discord {
+  background-position: 881px -211px;
+}
+
+.twitter {
+  background-position: -84px -19px;
+}
+
+.insta {
+  background-position: -152px -19px;
+}
+
+.twitch {
+  background-position: -761px -84px;
+}
+
+.spot {
+      background-position: -1117px -148px;
+}
+
+.bcamp {
+  background-size: 62px 62px;
+background-position: -6px -5px;
+}
+
+.bcampicon {
+  background-image: url('https://computeher.files.wordpress.com/2014/07/bandcamp-logo-white2.png');
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  border-radius: 7px;
+}
+
+.patreon {
+  background-size: 50px 50px;
+}
+
+.paticon {
+  background-image: url('http://vickieeisenstein.com/wp-content/uploads/2015/12/patreon-logo1.png');
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  border-radius: 7px;
+}
+
+#head {
+  cursor: pointer;
+}
+
+#head:hover {
+  -webkit-animation: spin .65s infinite ease;
+}
+
+#head:hover \ #lol {
+  display: block;
+}
+
+@-webkit-keyframes spin {
+    0%  {-webkit-transform: rotate(0deg);}
+    100% {-webkit-transform: rotate(-360deg);}
+}

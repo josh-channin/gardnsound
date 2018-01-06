@@ -5,59 +5,72 @@
   <meta charset="utf-8">
 
   <title>Gardnsound</title>
-
+  <link rel="icon" href="https://cdn.discordapp.com/attachments/227224735396790273/399302779169931284/gardnhead.png" sizes="16x16" type="image/png">
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
 
-  <style type="text/css">
-    html {
-      height: 100%;
-      overflow: hidden;
-    }
-    body {
-      height: 100%;
-      background: url(//b.thumbs.redditmedia.com/Hj0x1hGHSqGT0WeLH9BHvNcd47_BQCN1VXNtElW6VXs.png) no-repeat;
-      background-position: center center;
-      background-size: cover;
-      border: none;
-      -webkit-animation: pulsate 2s linear;
-      -webkit-animation-iteration-count: infinite;
-      animation: pulsate 2s linear;
-      animation-iteration-count: infinite;
-    }
-    #logo {
-      width: 500px;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      margin: auto;
-    }
-    @keyframes pulsate {
-      0% {
-        transform: scale(1);
-      }
-      25% {
-        transform: scale(1.03);
-      }
-      50% {
-        transform: scale(1);
-      }
-      75% {
-        transform: scale(.97);
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link
+     rel="stylesheet"
+     href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/yt.css">
 
-    </style>
 </head>
 
 <body>
-  <img id="logo" src="https://cdn.discordapp.com/attachments/227224735396790273/398559707259863040/lyla_and_gardnsound.png" />
+  <div class="video-background">
+    <div class="video-foreground">
+      <iframe src="https://www.youtube.com/embed/Id0feWe8haA?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&mute=1" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+  <header class="mdc-toolbar">
+    <div class="mdc-toolbar__row mdc-elevation--z7">
+      <section class="mdc-toolbar__section mdc-toolbar__section--align-start"></section>
+      <section class="mdc-toolbar__section">
+        <span class="mdc-toolbar__title gsoundUP">
+
+            <img
+            id="head"
+            width="28px"
+            src="https://cdn.discordapp.com/attachments/227224735396790273/399302779169931284/gardnhead.png"
+            style="    vertical-align: bottom;"/>
+            Gardnsound
+        </span>
+      </section>
+      <section class="mdc-toolbar__section mdc-toolbar__section--align-end"></section>
+    </div>
+  </header>
+  <div class="wrapper" style="mdc-elevation--z7">
+    <div class="mdc-card">
+
+        <div class="mdc-layout-grid">
+          <div class="mdc-layout-grid__inner">
+            <div class="mdc-layout-grid__cell icon facebook" data-link="https://www.facebook.com/gardnsound/"></div>
+            <div class="mdc-layout-grid__cell icon twitter" data-link="https://twitter.com/gardnsound"></div>
+            <div class="mdc-layout-grid__cell icon youtube" data-link="https://www.youtube.com/channel/UCD0MWF8oLyuUEgp6c58VVhA"></div>
+            <div class="mdc-layout-grid__cell icon discord" data-link="https://discord.gg/D2dVwQ8"></div>
+            <div class="mdc-layout-grid__cell bcampicon bcamp" data-link="http://gardnsound.com/"></div>
+            <div class="mdc-layout-grid__cell icon reddit" data-link="https://www.reddit.com/r/gardnsound/"></div>
+            <div class="mdc-layout-grid__cell paticon patreon" data-link="https://www.patreon.com/gardnsound"></div>
+            <div class="mdc-layout-grid__cell icon spot" data-link="https://open.spotify.com/artist/2Z0uEYNxIsYElu0cvDtJSr"></div>
+            <div class="mdc-layout-grid__cell icon insta" data-link="https://www.instagram.com/gardnsound/"></div>
+          </div>
+        </div>
+
+    </div>
+  </div>
+    <!-- <img class="logo" src="https://cdn.discordapp.com/attachments/227224735396790273/398559707259863040/lyla_and_gardnsound.png" />
+    <h2 class="gsound">Gardnsound</h2> -->
+  <script>
+    Array.from(document.getElementsByClassName('mdc-layout-grid__cell'))
+      .forEach(function(el) {
+        el.addEventListener('click', function(e) {
+          window.open(e.srcElement.dataset.link)
+        })
+      })
+  </script>
 </body>
 </html>
