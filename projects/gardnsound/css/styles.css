@@ -65,6 +65,7 @@ body {
   width: 150px;
   margin-top: 6px;
       pointer-events: none;
+      font-weight: bold;
 }
 .gsound {
   text-shadow: 2px 2px 0px cyan;
