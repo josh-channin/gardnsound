@@ -23,6 +23,7 @@ body {
   border: none;
 }
 #logo {
+  pointer-events: none;
   width: 500px;
   position: absolute;
   top: 0;
@@ -34,6 +35,25 @@ body {
   -webkit-animation-iteration-count: infinite;
   animation: pulsate 2s linear;
   animation-iteration-count: infinite;
+}
+.mdc-layout-grid {
+  padding: 0;
+}
+.mdc-layout-grid__inner {
+  margin-left: 24px;
+}
+.mdc-layout-grid__cell {
+  position: relative;
+  margin: 24px;
+}
+.icon-text {
+  position: absolute;
+  top: 50px;
+  left: -8px;
+  color: deeppink;
+  text-shadow: 1px 1px cyan;
+  width: 150px;
+  margin-top: 6px;
 }
 .gsound {
   text-shadow: 2px 2px 0px cyan;
@@ -67,11 +87,10 @@ body {
   }
 }
 .wrapper {
-  max-width: 374px;
+  max-width: 600px;
   position: fixed;
   left: 50%;
   top: 50%;
-  max-width: 374px;
   transform: translate(-50%, -50%);
 }
 .mdc-card {
@@ -92,7 +111,7 @@ body {
 }
 
 .icon:hover, .patreon:hover, .bcampicon:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
   box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
 }
 

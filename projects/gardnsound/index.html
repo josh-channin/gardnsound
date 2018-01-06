@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/yt.css">
 
+
 </head>
 
 <body>
@@ -43,26 +44,44 @@
       <section class="mdc-toolbar__section mdc-toolbar__section--align-end"></section>
     </div>
   </header>
-  <div class="wrapper" class="mdc-elevation--z7" id="icons" style="opacity: 0">
+  <div class="wrapper" class="mdc-elevation--z7" id="icons" style="">
     <div class="mdc-card">
 
         <div class="mdc-layout-grid">
           <div class="mdc-layout-grid__inner">
-            <div class="mdc-layout-grid__cell icon facebook" data-link="https://www.facebook.com/gardnsound/"></div>
-            <div class="mdc-layout-grid__cell icon twitter" data-link="https://twitter.com/gardnsound"></div>
-            <div class="mdc-layout-grid__cell icon youtube" data-link="https://www.youtube.com/channel/UCD0MWF8oLyuUEgp6c58VVhA"></div>
-            <div class="mdc-layout-grid__cell icon discord" data-link="https://discord.gg/D2dVwQ8"></div>
-            <div class="mdc-layout-grid__cell bcampicon bcamp" data-link="http://gardnsound.com/"></div>
-            <div class="mdc-layout-grid__cell icon reddit" data-link="https://www.reddit.com/r/gardnsound/"></div>
-            <div class="mdc-layout-grid__cell paticon patreon" data-link="https://www.patreon.com/gardnsound"></div>
-            <div class="mdc-layout-grid__cell icon spot" data-link="https://open.spotify.com/artist/2Z0uEYNxIsYElu0cvDtJSr"></div>
-            <div class="mdc-layout-grid__cell icon insta" data-link="https://www.instagram.com/gardnsound/"></div>
+            <div class="mdc-layout-grid__cell icon facebook" data-link="https://www.facebook.com/gardnsound/">
+                <span class="icon-text" style="left: -32px">Like on Facebook</span>
+            </div>
+            <div class="mdc-layout-grid__cell icon twitter" data-link="https://twitter.com/gardnsound">
+                <span class="icon-text" style="left: -32px">Follow on Twitter</span>
+            </div>
+            <div class="mdc-layout-grid__cell icon youtube" data-link="https://www.youtube.com/channel/UCD0MWF8oLyuUEgp6c58VVhA">
+                <span class="icon-text" style="left: -32px">Watch on Youtube</span>
+            </div>
+            <div class="mdc-layout-grid__cell icon discord" data-link="https://discord.gg/D2dVwQ8">
+                <span class="icon-text" style="left: -14px">Talk to us</span>
+            </div>
+            <div class="mdc-layout-grid__cell bcampicon bcamp" data-link="http://gardnsound.com/">
+                <span class="icon-text" style="left: -26px">Buy my tunes!</span>
+            </div>
+            <div class="mdc-layout-grid__cell icon reddit" data-link="https://www.reddit.com/r/gardnsound/">
+                <span class="icon-text" style="left: -32px">Upvote on Reddit</span>
+            </div>
+            <div class="mdc-layout-grid__cell paticon patreon" data-link="https://www.patreon.com/gardnsound">
+                <span class="icon-text" style="left: -16px">Support me</span>
+            </div>
+            <div class="mdc-layout-grid__cell icon spot" data-link="https://open.spotify.com/artist/2Z0uEYNxIsYElu0cvDtJSr">
+                <span class="icon-text" style="left: -32px">Listen on Spotify</span>
+            </div>
+            <div class="mdc-layout-grid__cell icon insta" data-link="https://www.instagram.com/gardnsound/">
+                <span class="icon-text">Instagram</span>
+            </div>
           </div>
         </div>
 
     </div>
   </div>
-    <img id="logo" src="https://cdn.discordapp.com/attachments/227224735396790273/398559707259863040/lyla_and_gardnsound.png" />
+    <!-- <img id="logo" src="https://cdn.discordapp.com/attachments/227224735396790273/398559707259863040/lyla_and_gardnsound.png" /> -->
   <script>
     Array.from(document.getElementsByClassName('mdc-layout-grid__cell'))
       .forEach(function(el) {
@@ -70,10 +89,10 @@
           window.open(e.srcElement.dataset.link)
         })
       })
-    setTimeout(function(){
-      fadeOut(document.getElementById('logo'))
-      fadeIn(document.getElementById('icons'))
-    },2000)
+    // setTimeout(function(){
+    //   fadeOut(document.getElementById('logo'));
+    //   fadeIn(document.getElementById('icons'));
+    // },2000)
 
     function fadeOut(element) {
           var op = 1;  // initial opacity
