@@ -67,13 +67,12 @@ body {
   }
 }
 .wrapper {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
   max-width: 374px;
-  margin: 150px auto;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  max-width: 374px;
+  transform: translate(-50%, -50%);
 }
 .mdc-card {
   background-color: #FFF;
