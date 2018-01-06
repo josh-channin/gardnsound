@@ -43,7 +43,7 @@
       <section class="mdc-toolbar__section mdc-toolbar__section--align-end"></section>
     </div>
   </header>
-  <div class="wrapper" class="mdc-elevation--z7" id="icons" style="display: none">
+  <div class="wrapper" class="mdc-elevation--z7" id="icons" style="opacity: 0">
     <div class="mdc-card">
 
         <div class="mdc-layout-grid">
@@ -71,9 +71,30 @@
         })
       })
     setTimeout(function(){
-      document.getElementById('logo').style.display = "none"
-      document.getElementById('icons').style.display = "block";
+      fadeOut(document.getElementById('logo'))
+      fadeIn(document.getElementById('icons'))
     },2000)
+
+    function fadeOut(element) {
+          var op = 1;  // initial opacity
+          var timer = setInterval(function () {
+              if (op <= 0.1){
+                  clearInterval(timer);
+              }
+              element.style.opacity = op;
+              op -= 0.1;
+          }, 30);
+      }
+    function fadeIn(element) {
+        var op = 0.1;  // initial opacity
+        var timer = setInterval(function () {
+            if (op >= 1){
+                clearInterval(timer);
+            }
+            element.style.opacity = op;
+            op += 0.1;
+        }, 30);
+    }
   </script>
 </body>
 </html>
