@@ -44,7 +44,7 @@
       <section class="mdc-toolbar__section mdc-toolbar__section--align-end"></section>
     </div>
   </header>
-  <div class="wrapper" class="mdc-elevation--z7" id="icons" style="">
+  <div class="wrapper" class="mdc-elevation--z7" id="icons" style="opacity: 0">
     <div class="mdc-card">
 
         <div class="mdc-layout-grid">
@@ -81,7 +81,7 @@
 
     </div>
   </div>
-    <!-- <img id="logo" src="https://cdn.discordapp.com/attachments/227224735396790273/398559707259863040/lyla_and_gardnsound.png" /> -->
+    <img id="logo" src="https://cdn.discordapp.com/attachments/227224735396790273/398559707259863040/lyla_and_gardnsound.png" />
   <script>
     Array.from(document.getElementsByClassName('mdc-layout-grid__cell'))
       .forEach(function(el) {
@@ -89,10 +89,10 @@
           window.open(e.srcElement.dataset.link)
         })
       })
-    // setTimeout(function(){
-    //   fadeOut(document.getElementById('logo'));
-    //   fadeIn(document.getElementById('icons'));
-    // },2000)
+    setTimeout(function(){
+      fadeOut(document.getElementById('logo'));
+      fadeIn(document.getElementById('icons'));
+    },2000)
 
     function fadeOut(element) {
           var op = 1;  // initial opacity
