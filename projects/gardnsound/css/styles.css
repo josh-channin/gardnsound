@@ -36,6 +36,16 @@ body {
   animation: pulsate 2s linear;
   animation-iteration-count: infinite;
 }
+.mdc-card {
+  background-color: #FFF;
+    padding: 40px;
+        opacity: .9;
+
+        padding: 40px 40px 60px;
+}
+.mdc-grid-tile {
+  width: 216px;
+}
 .mdc-layout-grid {
   padding: 0;
 }
@@ -54,6 +64,7 @@ body {
   text-shadow: 1px 1px cyan;
   width: 150px;
   margin-top: 6px;
+      pointer-events: none;
 }
 .gsound {
   text-shadow: 2px 2px 0px cyan;
@@ -93,14 +104,7 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
 }
-.mdc-card {
-  background-color: #FFF;
-    padding: 40px;
-        opacity: .9;
-}
-.mdc-grid-tile {
-  width: 216px;
-}
+
 
 .icon {
   background-image: url('https://ps.w.org/social-media-buttons-toolbar/assets/screenshot-1.png?rev=1726633');
@@ -108,10 +112,12 @@ body {
   width: 50px;
   cursor: pointer;
   border-radius: 8px;
+    transition: .3s linear;
 }
 
 .icon:hover, .patreon:hover, .bcampicon:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
+  transition: .09s linear;
   box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
 }
 
@@ -161,7 +167,8 @@ background-position: -6px -5px;
   height: 50px;
   width: 50px;
   cursor: pointer;
-  border-radius: 7px;
+  border-radius: 8px;
+  transition: .3s linear;
 }
 
 .patreon {
@@ -173,7 +180,8 @@ background-position: -6px -5px;
   height: 50px;
   width: 50px;
   cursor: pointer;
-  border-radius: 7px;
+  border-radius: 8px;
+  transition: .3s linear;
 }
 
 #head {
