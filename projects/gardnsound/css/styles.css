@@ -213,11 +213,11 @@ hr {
 }
 
 .facebook {
-  background-position: -16px -19px;
+  background-position: -19px -22px;
 }
 
 .youtube {
-  background-position: -1185px -19px;
+  background-position: -1188px -20px;
 }
 
 .soundc {
@@ -225,19 +225,19 @@ hr {
 }
 
 .reddit {
-  background-position: 746px -84px;
+  background-position: 743px -85px;
 }
 
 .discord {
-  background-position: 881px -211px;
+  background-position: 880px -213px;
 }
 
 .twitter {
-  background-position: -84px -19px;
+  background-position: -86px -22px;
 }
 
 .insta {
-  background-position: -152px -19px;
+  background-position: -154px -22px;
 }
 
 .twitch {
@@ -254,5 +254,5 @@ hr {
 }
 
 .patreon {
-  background-size: 50px 50px;
+  background-size: 46px 46px;
 }
