@@ -36,12 +36,17 @@ body {
   animation: pulsate 2s linear;
   animation-iteration-count: infinite;
 }
+hr {
+  width: 100%;
+border: 1px solid #ff69b46e;
+box-shadow: 0 3px 1px -2px yellow, 0 2px 2px 0 #ffff0024, 0 1px 5px 0 #ffff0024;
+
+}
 .mdc-card {
   background-color: #FFF;
-    padding: 40px;
-        opacity: .9;
-
-        padding: 40px 40px 60px;
+  padding: 40px;
+  opacity: .9;
+  padding: 40px 40px 60px;
 }
 .mdc-grid-tile {
   width: 216px;
@@ -55,6 +60,28 @@ body {
 .mdc-layout-grid__cell {
   position: relative;
   margin: 24px;
+}
+.mdc-layout-grid {
+  max-height: 463px;
+overflow-y: auto;
+overflow-x: hidden;
+}
+
+.mdc-layout-grid::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+.mdc-layout-grid::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+.mdc-layout-grid::-webkit-scrollbar-thumb
+{
+	background-color: #00ffff7a;
 }
 .icon-text {
   position: absolute;
@@ -100,6 +127,7 @@ body {
 }
 .wrapper {
   max-width: 600px;
+  min-width: 600px;
   position: fixed;
   left: 50%;
   top: 50%;
@@ -113,12 +141,12 @@ body {
   width: 50px;
   cursor: pointer;
   border-radius: 8px;
-    transition: .3s linear;
+    transition: .05s linear;
 }
 
 .icon:hover, .patreon:hover, .bcampicon:hover {
   transform: scale(1.2);
-  transition: .09s linear;
+  transition: .05s linear;
   box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
 }
 
@@ -169,7 +197,7 @@ background-position: -6px -5px;
   width: 50px;
   cursor: pointer;
   border-radius: 8px;
-  transition: .3s linear;
+  transition: .05s linear;
 }
 
 .patreon {
@@ -182,22 +210,5 @@ background-position: -6px -5px;
   width: 50px;
   cursor: pointer;
   border-radius: 8px;
-  transition: .3s linear;
-}
-
-#head {
-  cursor: pointer;
-}
-
-#head:hover {
-  -webkit-animation: spin .65s infinite ease;
-}
-
-#head:hover \ #lol {
-  display: block;
-}
-
-@-webkit-keyframes spin {
-    0%  {-webkit-transform: rotate(0deg);}
-    100% {-webkit-transform: rotate(-360deg);}
+  transition: .05s linear;
 }
