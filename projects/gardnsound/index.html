@@ -100,6 +100,7 @@
     setTimeout(function(){
       fadeOut(document.getElementById('logo'));
       fadeIn(document.getElementById('icons'));
+      document.getElementById('logo').outerHTML = "";
     },2000)
 
     function fadeOut(element) {

@@ -59,47 +59,55 @@ border: 1px solid #00ffff70;
 box-shadow: 0 3px 1px -2px yellow, 0 2px 2px 0 #ffff0024, 0 1px 5px 0 #ffff0024;
 
 }
+.mdc-toolbar__title {
+min-height: 180px;
+}
+
 .mdc-card {
   background-color: #FFF;
   padding: 40px;
   opacity: .9;
   padding: 40px 40px 60px;
 }
+
 .mdc-grid-tile {
   width: 216px;
 }
+
 .mdc-layout-grid {
   padding: 0;
 }
+
 .mdc-layout-grid__inner {
   margin-left: 24px;
 }
+
 .mdc-layout-grid__cell {
   position: relative;
   margin: 24px;
 }
+
 .mdc-layout-grid {
-  max-height: 463px;
-overflow-y: auto;
-overflow-x: hidden;
+  max-height: 520px;
+  padding-bottom: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
-.mdc-layout-grid::-webkit-scrollbar-track
-{
+.mdc-layout-grid::-webkit-scrollbar-track {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	background-color: #F5F5F5;
 }
 
-.mdc-layout-grid::-webkit-scrollbar
-{
+.mdc-layout-grid::-webkit-scrollbar {
 	width: 6px;
 	background-color: #F5F5F5;
 }
 
-.mdc-layout-grid::-webkit-scrollbar-thumb
-{
+.mdc-layout-grid::-webkit-scrollbar-thumb {
 	background-color: #00ffff7a;
 }
+
 .icon-text {
   position: absolute;
   top: 50px;
@@ -111,20 +119,24 @@ overflow-x: hidden;
       pointer-events: none;
       font-weight: bold;
 }
+
 .gsound {
   text-shadow: 2px 2px 0px cyan;
   color: #ff00d2;
   font-size: 1.5rem;
 }
+
 .gsoundUP {
   text-transform: uppercase;
   text-shadow: 2px 2px 0px cyan;
   color: #ff00d2;
   font-size: 1.5rem;
 }
+
 .gsound:hover {
   text-shadow: 2px 2px 0px yellow;
 }
+
 @keyframes pulsate {
   0% {
     transform: scale(1);
@@ -142,6 +154,7 @@ overflow-x: hidden;
     transform: scale(1);
   }
 }
+
 .wrapper {
   max-width: 600px;
   min-width: 600px;
