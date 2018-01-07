@@ -62,11 +62,11 @@ body::after {
 hr {
   width: 100%;
   border: 1px solid #00ffff70;
-  box-shadow: 0 3px 1px -2px yellow, 0 2px 2px 0 #ffff0024, 0 1px 5px 0 #ffff0024;
+  box-shadow: 0 3px 1px -2px yellow, 0 2px 2px 0 hotpink, 0 1px 5px 0 yellow;
 }
 
 .mdc-toolbar__title {
-  min-height: 180px;
+  min-height: 150px;
   margin-left: 0px;
 }
 
@@ -138,6 +138,7 @@ hr {
   text-shadow: 2px 2px 0px cyan;
   color: #ff00d2;
   font-size: 1.5rem;
+      padding: 28px 0px 28px 0px;
 }
 
 .gsound:hover {
