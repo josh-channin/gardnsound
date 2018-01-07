@@ -22,7 +22,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff69b4', end
 
 }
 body::after {
-  /* content: ""; */
+  content: "";
   background: url(//b.thumbs.redditmedia.com/TIyX-FSFqXtQQQ_zBEOOgv2e3q8-1WmLcfs3PrahjRk.png);
   position: absolute;
   left: 0;
