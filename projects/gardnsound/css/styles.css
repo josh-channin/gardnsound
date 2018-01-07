@@ -38,6 +38,17 @@ body::after {
   z-index: -9;
 }
 
+.wrapper {
+  max-width: 850px;
+  min-width: 400px;
+  min-height: 500px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
 @keyframes play {
     100% {
         background-position: -1800px
@@ -59,6 +70,15 @@ body::after {
   animation-iteration-count: infinite;
 }
 
+#head {
+  -webkit-touch-callout: none; /* iOS Safari */
+   -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+      -moz-user-select: none; /* Firefox */
+       -ms-user-select: none; /* Internet Explorer/Edge */
+           user-select: none;
+}
+
 hr {
   width: 100%;
   border: 1px solid #00ffff70;
@@ -66,7 +86,6 @@ hr {
 }
 
 .mdc-toolbar__title {
-  min-height: 150px;
   margin-left: 0px;
 }
 
@@ -163,14 +182,6 @@ hr {
   }
 }
 
-.wrapper {
-  max-width: 600px;
-  min-width: 600px;
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
 
 
 .icon {
