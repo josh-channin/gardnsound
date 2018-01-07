@@ -19,8 +19,9 @@ body {
   padding: 0;
   background: url(//b.thumbs.redditmedia.com/Hj0x1hGHSqGT0WeLH9BHvNcd47_BQCN1VXNtElW6VXs.png) no-repeat;
   background-position: center center;
-  background-size: cover;
+  background-size: contain;
   border: none;
+  background-repeat: repeat;
 }
 #logo {
   pointer-events: none;
