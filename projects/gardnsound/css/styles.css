@@ -23,7 +23,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff69b4', end
 }
 body::after {
   content: "";
-  background: url(//b.thumbs.redditmedia.com/TIyX-FSFqXtQQQ_zBEOOgv2e3q8-1WmLcfs3PrahjRk.png);
+  background: url(../images/tvfilter.png);
   position: absolute;
   left: 0;
   top: 0;
@@ -167,18 +167,42 @@ margin-left: 0px;
 
 
 .icon {
-  background-image: url('https://ps.w.org/social-media-buttons-toolbar/assets/screenshot-1.png?rev=1726633');
+  background-image: url('../images/icons.png');
   height: 50px;
   width: 50px;
   cursor: pointer;
   border-radius: 8px;
-    transition: .05s linear;
+  transition: .05s linear;
+  border: 2px solid white;
+  box-shadow: 1px 1px 2px cyan;
+}
+
+.bcampicon {
+  background-image: url('../images/bandcamp.png');
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: .05s linear;
+  border: 2px solid white;
+  box-shadow: 1px 1px 2px cyan;
+}
+
+.paticon {
+  background-image: url('../images/patreon.png');
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: .05s linear;
+  border: 2px solid white;
+  box-shadow: 1px 1px 2px cyan;
 }
 
 .icon:hover, .patreon:hover, .bcampicon:hover {
   transform: scale(1.2);
   transition: .05s linear;
-  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+  box-shadow: 0 3px 1px -2px cyan, 0 2px 2px 0 cyan, 0 1px 5px 0 rgba(0,0,0,.12);
 }
 
 .facebook {
@@ -214,32 +238,14 @@ margin-left: 0px;
 }
 
 .spot {
-      background-position: -1117px -148px;
+  background-position: -1117px -148px;
 }
 
 .bcamp {
   background-size: 62px 62px;
-background-position: -6px -5px;
-}
-
-.bcampicon {
-  background-image: url('https://computeher.files.wordpress.com/2014/07/bandcamp-logo-white2.png');
-  height: 50px;
-  width: 50px;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: .05s linear;
+  background-position: -6px -5px;
 }
 
 .patreon {
   background-size: 50px 50px;
-}
-
-.paticon {
-  background-image: url('http://vickieeisenstein.com/wp-content/uploads/2015/12/patreon-logo1.png');
-  height: 50px;
-  width: 50px;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: .05s linear;
 }
