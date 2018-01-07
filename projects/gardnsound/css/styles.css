@@ -3,24 +3,27 @@
   --mdc-theme-background: #000;
   --mdc-theme-text-primary-on-primary: #000;
 }
+
 * {
   font-family: sans-serif;
   color: black;
 }
+
 html {
   height: 100%;
   margin: 0;
   padding: 0;
   overflow: hidden;
 }
+
 body {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff69b4+0,00ffff+100&1+0,0.83+100 */
-background: -moz-linear-gradient(left,  rgba(255,105,180,1) 0%, rgba(0,255,255,0.83) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(left,  rgba(255,105,180,1) 0%,rgba(0,255,255,0.83) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to right,  rgba(255,105,180,1) 0%,rgba(0,255,255,0.83) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff69b4', endColorstr='#d400ffff',GradientType=1 ); /* IE6-9 */
-
+  background: -moz-linear-gradient(left,  rgba(255,105,180,1) 0%, rgba(0,255,255,0.83) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  rgba(255,105,180,1) 0%,rgba(0,255,255,0.83) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  rgba(255,105,180,1) 0%,rgba(0,255,255,0.83) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff69b4', endColorstr='#d400ffff',GradientType=1 ); /* IE6-9 */
 }
+
 body::after {
   content: "";
   background: url(../images/tvfilter.png);
@@ -34,11 +37,13 @@ body::after {
   animation: play 1s steps(12) infinite;
   z-index: -9;
 }
+
 @keyframes play {
     100% {
         background-position: -1800px
     }
 }
+
 #logo {
   pointer-events: none;
   width: 500px;
@@ -53,15 +58,16 @@ body::after {
   animation: pulsate 2s linear;
   animation-iteration-count: infinite;
 }
+
 hr {
   width: 100%;
-border: 1px solid #00ffff70;
-box-shadow: 0 3px 1px -2px yellow, 0 2px 2px 0 #ffff0024, 0 1px 5px 0 #ffff0024;
-
+  border: 1px solid #00ffff70;
+  box-shadow: 0 3px 1px -2px yellow, 0 2px 2px 0 #ffff0024, 0 1px 5px 0 #ffff0024;
 }
+
 .mdc-toolbar__title {
-min-height: 180px;
-margin-left: 0px;
+  min-height: 180px;
+  margin-left: 0px;
 }
 
 .mdc-card {
@@ -114,11 +120,11 @@ margin-left: 0px;
   top: 50px;
   left: -8px;
   color: deeppink;
-  text-shadow: 1px 1px cyan;
+  text-shadow: 1px 2px cyan, -1px 2px yellow;
   width: 150px;
   margin-top: 6px;
-      pointer-events: none;
-      font-weight: bold;
+  pointer-events: none;
+  font-weight: bold;
 }
 
 .gsound {
