@@ -51,7 +51,7 @@ body::after {
 
 @keyframes play {
     100% {
-        background-position: -1800px
+        background-position: -1800px -1000px;
     }
 }
 
