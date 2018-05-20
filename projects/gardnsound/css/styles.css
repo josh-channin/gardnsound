@@ -102,6 +102,7 @@ hr {
 
 .mdc-layout-grid {
   padding: 0;
+  width: 100% !important;
 }
 
 .mdc-layout-grid__inner {
