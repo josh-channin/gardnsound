@@ -152,7 +152,7 @@ scene.preRender = function() {
   var distance;
 
   if ( fly.flying ) {
-    console.log(mouse.x + ',' + mouse.y)
+    // console.log(mouse.x + ',' + mouse.y)
 
     if(!1) {
     //  fly.move(150, 0);
