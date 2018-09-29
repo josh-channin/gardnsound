@@ -2,17 +2,30 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.1.3/css/ol.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.1.3/css/ol.css"
+        type="text/css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/ConnorAtherton/loaders.css/master/loaders.min.css" type="text/css">
     <style>
         html,
         body {
             margin: 0;
             padding: 0;
+            background: black;
         }
 
         #map {
             height: 100vh;
             width: 100vw
+        }
+
+        .loader {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 1;
         }
     </style>
     <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.2.0/build/ol.js"></script>
@@ -21,10 +34,16 @@
 </head>
 
 <body>
+    <div class="loader">
+        <div class="ball-scale-ripple-multiple">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
     <div id="map"></div>
 </body>
 <script>
-
     var sat = new ol.layer.Tile({
         source: new ol.source.XYZ({
             url: 'https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
@@ -39,7 +58,14 @@
         })
     });
 
+    document.querySelector('.loader').style.display = 'none';
+
     var ol2d = new ol.Map({
+        controls: ol.control.defaults({
+            attribution: false,
+            zoom: false,
+            rotate: false
+        }),
         layers: [
             sat, cloud
         ],
@@ -52,7 +78,14 @@
         })
     });
 
-    cloud.setOpacity(ol2d.getView().getZoom() > 11 ? 0 : ol2d.getView().getZoom() < 5 ? .75 : scale(11, 5, 0, .8, ol2d.getView().getZoom()));
+    var ol3d = new olcs.OLCesium({
+        map: ol2d,
+    });
+
+
+    cloud.setOpacity(ol2d.getView().getZoom() > 11 ? 0 : ol2d.getView().getZoom() < 5 ? .75 : scale(11, 5,
+        0, .8, ol2d.getView()
+        .getZoom()));
 
     ol2d.on('moveend', function () {
 
@@ -63,19 +96,38 @@
         );
 
         history.replaceState(null, null, `#${ol2d.getView().getCenter()}/${ol2d.getView().getZoom()}`)
-        
+        // debounce(saveHistory, 10);
+
     });
 
-    var ol3d = new olcs.OLCesium({
-        map: ol2d,
-    });
 
     ol3d.setEnabled(true);
 
     function scale(rmin, rmax, smin, smax, x) {
         return (smax - smin) * ((x - rmin) / (rmax - rmin)) + smin
     }
-    
+
+    function saveHistory() {
+        history.replaceState(null, null, `#${ol2d.getView().getCenter()}/${ol2d.getView().getZoom()}`)
+    }
+
+    function debounce(func) {
+        var wait = arguments.length <= 1 || arguments[1] === undefined ? 100 : arguments[1];
+
+        var timeout = void 0;
+        return function () {
+            var _this = this;
+
+            for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                args[_key] = arguments[_key];
+            }
+
+            clearTimeout(timeout);
+            timeout = setTimeout(function () {
+                func.apply(_this, args);
+            }, wait);
+        };
+    }
 </script>
 
 </html>
